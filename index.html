@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahmida Faiza Labonno</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #0e0e0e; color: #eaeaea; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; text-align: center; padding: 80px 0 40px; }
+    .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #2a2a2a; margin-bottom: 22px; }
+    h1 { font-size: 3rem; margin-bottom: 6px; }
+    .subtitle { color: #9a9a9a; margin-bottom: 22px; }
+    .intro { max-width: 600px; margin: 0 auto 55px; line-height: 1.8; color: #cfcfcf; }
+
+    /* Slider */
+    .slider { width: 100%; overflow: hidden; margin-bottom: 80px; position: relative; }
+    .slide-track { display: flex; gap: 25px; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; cursor: grab; }
+    .slide-track img { width: 280px; height: 360px; object-fit: cover; border-radius: 20px; opacity: 0.9; flex-shrink: 0; }
+    .slide-track:active { cursor: grabbing; cursor: -webkit-grabbing; }
+
+    /* Hobbies */
+    .section-title { font-size: 1.4rem; margin-bottom: 25px; }
+    .hobbies { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 80px; }
+    .hobby { padding: 10px 22px; border: 1px solid #2a2a2a; border-radius: 30px; font-size: 0.9rem; color: #cfcfcf; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .hobby.show { opacity: 1; transform: translateY(0); }
+
+    /* Arts */
+    .arts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-bottom: 80px; }
+    .arts img { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; opacity: 0.9; }
+
+    footer { text-align: center; padding: 30px 0; color: #777; font-size: 0.85rem; border-top: 1px solid #1f1f1f; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .slide-track img { width: 220px; height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Profile -->
+    <img src="https://i.ibb.co.com/3ybLnzpf/retouch-2025120401410072.jpg" class="profile-img">
+    <h1>Fahmida Faiza Labonno</h1>
+    <div class="subtitle">Minimal • Calm • Personal</div>
+    <div class="intro">
+      Fahmida Faiza Labonno is someone who finds beauty in simplicity,
+      emotions in art, and meaning in quiet moments.
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+      <div class="slide-track" id="slider">
+        <!-- Original slides -->
+        <img src="https://i.ibb.co.com/Rt0DCs6/retouch-2025120401442173.jpg">
+        <img src="https://i.ibb.co.com/3ybLnzpf/retouch-2025120401410072.jpg">
+        <img src="https://i.ibb.co.com/DfNd3D06/retouch-2025120401555920.jpg">
+        <img src="https://i.ibb.co.com/3wyTW6J/retouch-2025120401421719.jpg">
+        <img src="https://i.ibb.co.com/zT69yKdp/retouch-2025120401461261.jpg">
+        <img src="https://i.ibb.co.com/VY8GvkjV/1746541683325.png">
+        <!-- Duplicate for seamless loop -->
+        <img src="https://i.ibb.co/Rt0DCs6/retouch-2025120401442173.jpg">
+        <img src="https://i.ibb.co/3ybLnzpf/retouch-2025120401410072.jpg">
+        <img src="https://i.ibb.co/DfNd3D06/retouch-2025120401555920.jpg">
+        <img src="https://i.ibb.co/3wyTW6J/retouch-2025120401421719.jpg">
+        <img src="https://i.ibb.co/zT69yKdp/retouch-2025120401461261.jpg">
+        <img src="https://i.ibb.co/VY8GvkjV/1746541683325.png">
+      </div>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="section-title">Hobbies</div>
+    <div class="hobbies">
+      <div class="hobby">Drawing</div>
+      <div class="hobby">Photography</div>
+      <div class="hobby">Reading</div>
+      <div class="hobby">Music</div>
+      <div class="hobby">Travel</div>
+    </div>
+
+    <!-- Arts -->
+    <div class="section-title">Arts</div>
+    <div class="arts">
+      <img src="https://i.ibb.co.com/0jcBfy3B/Screenshot-2026-01-15-02-58-06-044-com-facebook-lite.png">
+      <img src="https://i.ibb.co.com/jKkQY0f/Screenshot-2026-01-15-02-58-14-315-com-facebook-lite.png">
+      <img src="https://i.ibb.co.com/QF2gyy4B/Screenshot-2026-01-15-02-58-23-977-com-facebook-lite.png">
+      <img src="https://i.ibb.co.com/k60z7Dmy/Screenshot-2026-01-15-02-58-34-740-com-facebook-lite.png">
+    
+    </div>
+
+ 
+
+  <footer>
+    © 2026 Fahmida Faiza Labonno. All rights reserved.
+  </footer>
+
+  <script>
+    // Hobby animation
+    const hobbies = document.querySelectorAll('.hobby');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => { entry.target.classList.add('show'); }, index * 120);
+        }
+      });
+    }, { threshold: 0.3 });
+    hobbies.forEach(hobby => observer.observe(hobby));
+
+    // Manual draggable slider with endless loop
+    const slider = document.getElementById('slider');
+    let isDown = false, startX, scrollLeft;
+
+    // Start drag
+    slider.addEventListener('mousedown', e => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => isDown = false);
+    slider.addEventListener('mouseup', () => isDown = false);
+
+    // Drag move
+    slider.addEventListener('mousemove', e => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+
+      // Loop check
+      const maxScroll = slider.scrollWidth / 2;
+      if(slider.scrollLeft >= maxScroll) slider.scrollLeft -= maxScroll;
+      if(slider.scrollLeft <= 0) slider.scrollLeft += maxScroll;
+    });
+
+    // Touch support
+    slider.addEventListener('touchstart', e => {
+      startX = e.touches[0].pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+
+      const maxScroll = slider.scrollWidth / 2;
+      if(slider.scrollLeft >= maxScroll) slider.scrollLeft -= maxScroll;
+      if(slider.scrollLeft <= 0) slider.scrollLeft += maxScroll;
+    });
+  </script>
+
+</body>
+</html>
